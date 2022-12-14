@@ -108,9 +108,14 @@ else:
     
 persona = [inc,deg,par,mar,fem,age]
 
+predicted_sm_li = lr.predict([persona])
+
 probs = lr.predict_proba([persona])
 probs_r = probs[0][1]
 
+
+st.write(f"Predicted class):{predicted_sm_li[0]}")
 st.write(f"This {age_label} {mar_label} {par_label}, a {deg_label}, and in a {inc_label} bracket person has a {probs_r} probability of having a LinkedIn account ")
 
+st.markdown("Hi! Welcome to my project. This app will predict the liklihood that someone has a LinkedIn profile based on their answers. An ML model will run you answers and based on demographics, it will predict the probability.")
 
