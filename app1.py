@@ -58,16 +58,24 @@ primaryColor="purple"
 
 with st.sidebar:
     inc = st.number_input("Income (low=1 to high=9)",1,9)
-    st.markdown("Income level 1: less than $10,000")
-    st.markdown("Income level 2: $10,001 to $20,000")
-    st.markdown("Income level 3: $20,001 to $30,000")
-    st.markdown("Income level 4: $30,001 to $40,000")
-    st.markdown("Income level 5: $40,001 to $50,000")
-    st.markdown("Income level 6: $50,001 to $75,000")
-    st.markdown("Income level 7: $75,001 to $100,000")
-    st.markdown("Income level 8: $100,001 to $150,000")
-    st.markdown("Income level 9: $150,001 or more")
-    deg = st.number_input("College degree (no=0)", 0,1)
+    st.markdown("Education level 1: less than $10,000")
+    st.markdown("Income level 2: $10,000 to under $20,000")
+    st.markdown("Income level 3: $20,000 to under $30,000")
+    st.markdown("Income level 4: $30,000 to under $40,000")
+    st.markdown("Income level 5: $40,000 to under $50,000")
+    st.markdown("Income level 6: $50,000 to under $75,000")
+    st.markdown("Income level 7: $75,000 to under $100,000")
+    st.markdown("Income level 8: $100,000 to under $150,000")
+    st.markdown("Income level 9: $150,000 or more")
+    deg = st.number_input("Education Level", 1,8)
+    st.markdown("Education level 1: less than High School")
+    st.markdown("Education level 2: High School incomplete")
+    st.markdown("Education level 3: High School graduate")
+    st.markdown("Education level 4: Some College, no degree")
+    st.markdown("Education level 5: Two-year associate degree from a College or University")
+    st.markdown("Education level 6: Four-year College or University degree")
+    st.markdown("Education level 7: Some postgraduate or professional schooling, no postgraduate degree")
+    st.markdown("Education level 8: Postgraduate or professional degree")
     par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
     mar = st.number_input("Married (0=no, 1=yes)", 0,1)
     fem = st.number_input("Female (0=no, 1=yes)", 0,1)
@@ -86,9 +94,21 @@ else:
 
 # Education
 if deg == 1:
-    deg_label = "college graduate"
-else: 
-    deg_label = "non-college graduate"
+    deg_label = "Less than high school"
+elif deg ==2:
+    deg_label = "High School incomplete"
+elif deg ==3:
+    deg_label = "High School graduate"
+elif deg ==4: 
+    deg_label = "Some College, no degree"
+elif deg ==5:
+    deg_label = "Two-year Associate degree"
+elif deg ==6:
+    deg_label = "Four-year College or University degree"
+elif deg ==7: 
+    deg_label = "Some postgraduate schooling, no degree"
+elif deg ==8:
+    deg_label = "Postgraduate or professional degree" 
 
 # Parental Status
 if par == 1:
