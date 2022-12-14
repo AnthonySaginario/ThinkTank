@@ -62,7 +62,7 @@ with st.sidebar:
     par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
     mar = st.number_input("Married (0=no, 1=yes)", 0,1)
     fem = st.number_input("Female (0=no, 1=yes)", 0,1)
-    age = st.number_input("Age (low=1 to high=100)", 1, 100)
+    age = st.number_input("Age (low=1 to high=97)", 1, 97)
 
 
 # Create lables from numberic inputs
