@@ -54,7 +54,7 @@ y_pred = lr.predict(X_test)
 
 ## Streamlit
 base="dark"
-primaryColor="neongreen"
+primaryColor="purple"
 
 with st.sidebar:
     inc = st.number_input("Income (low=1 to high=9)",1,9)
