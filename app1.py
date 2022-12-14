@@ -121,4 +121,4 @@ st.subheader('This app predicts the likelihood that a person has a LinkedIn prof
 
 st.write(f"This {age_label} {mar_label} {par_label}, whom is a {inc_label} {deg_label}, has a {probs_r} probability of having a LinkedIn account")
 st.write(f"Predicted class:{predicted_sm_li[0]}")
-
+st.write(f"Predicted classses 1 = LinkedIn User, 0 = Non-LinkedIn User
