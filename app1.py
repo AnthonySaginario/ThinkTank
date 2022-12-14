@@ -58,7 +58,15 @@ primaryColor="purple"
 
 with st.sidebar:
     inc = st.number_input("Income (low=1 to high=9)",1,9)
-   
+    st.markdown("Income level 1: less than $10,000")
+    st.markdown("Income level 2: $10,000 to under $20,000")
+    st.markdown("Income level 3: $20,000 to under $30,000")
+    st.markdown("Income level 4: $30,000 to under $40,000")
+    st.markdown("Income level 5: $40,000 to under $50,000")
+    st.markdown("Income level 6: $50,000 to under $75,000")
+    st.markdown("Income level 7: $75,000 to under $100,000")
+    st.markdown("Income level 8: $100,000 to under $150,000")
+    st.markdown("Income level 9: $150,000 or more")
     deg = st.number_input("Education Level", 1,8)
     st.markdown("Education level 1: less than High School")
     st.markdown("Education level 2: High School incomplete")
