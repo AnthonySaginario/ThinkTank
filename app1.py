@@ -116,6 +116,6 @@ probs_r = probs[0][1]
 st.header('Hi! Welcome to my project.')
 st.subheader('This app predicts the likelihood that a person has a LinkedIn profile based on your answers.')
 
-
+st.write(f"This {age_label} {mar_label} {par_label}, a {deg_label}, and in a {inc_label} bracket person has a {probs_r} probability of having a LinkedIn account")
 st.write(f"Predicted class):{predicted_sm_li[0]}")
-st.write(f"This {age_label} {mar_label} {par_label}, a {deg_label}, and in a {inc_label} bracket person has a {probs_r} probability of having a LinkedIn account ")
+
