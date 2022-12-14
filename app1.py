@@ -53,7 +53,6 @@ lr.fit(X_train, y_train)
 y_pred = lr.predict(X_test)
 
 ## Streamlit
-[theme]
 base="dark"
 primaryColor="neongreen"
 
