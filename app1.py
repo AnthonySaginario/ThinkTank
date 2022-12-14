@@ -58,6 +58,15 @@ primaryColor="neongreen"
 
 with st.sidebar:
     inc = st.number_input("Income (low=1 to high=9)",1,9)
+    st.markdown("Income level 1: less than $10,000")
+    st.markdown("Income level 2: $10,001 to $20,000")
+    st.markdown("Income level 3: $20,001 to $30,000")
+    st.markdown("Income level 4: $30,001 to $40,000")
+    st.markdown("Income level 5: $40,001 to $50,000")
+    st.markdown("Income level 6: $50,001 to $75,000")
+    st.markdown("Income level 7: $75,001 to $100,000")
+    st.markdown("Income level 8: $100,001 to $150,000")
+    st.markdown("Income level 9: $150,001 or more")
     deg = st.number_input("College degree (no=0)", 0,1)
     par = st.number_input("Parent (0=no, 1=yes)", 0, 1)
     mar = st.number_input("Married (0=no, 1=yes)", 0,1)
