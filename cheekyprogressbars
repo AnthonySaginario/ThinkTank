@@ -1,0 +1,71 @@
+import { motion } from "framer-motion";
+
+const SkillsDetails = () => {
+  const skillBars = [
+    {
+      name: "Front-end",
+      percentage: "95%",
+      bgColor: "bg-neon-blue",
+    },
+    {
+      name: "Back-end",
+      percentage: "75%",
+      bgColor: "bg-neon-purple",
+    },
+    {
+      name: "ReactJS",
+      percentage: "70%",
+      bgColor: "bg-neon-blue",
+    },
+    {
+      name: "Python",
+      percentage: "65%",
+      bgColor: "bg-neon-purple",
+    },
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { scaleX: 0 },
+    show: (percentage) => ({
+      scaleX: parseFloat(percentage) / 100,
+      transition: { duration: 1, ease: "easeInOut" },
+    }),
+  };
+
+  return (
+    <motion.div
+      className="w-full max-w-[300%] mx-auto"
+      variants={containerVariants}
+      initial="hidden"
+      animate="show"
+      style={{ width: "100%" }}
+    >
+      {skillBars.map(({ name, percentage, bgColor, glowClass }, index) => (
+        <div key={index} className="mb-8">
+          <p className="text-xl font-semibold text-blue-800 dark:text-slate-300">
+            {name}
+          </p>
+          <div className="w-full h-1 bg-gray-300 shadow-inner rounded-lg">
+            <motion.div
+              className={`h-full ${bgColor} rounded-lg origin-left ${glowClass}`}
+              custom={percentage}
+              variants={itemVariants}
+            ></motion.div>
+          </div>
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
+export default SkillsDetails;
